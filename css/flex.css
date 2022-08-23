@@ -1,0 +1,143 @@
+/* 
+Colors
+Primary: #131c29
+secondary: #ff8901
+link color: #596573
+Top gradient: #335973
+Bottom gradient: #0f1721
+Footer: #0b1016
+Button color: #213349
+Date1: #be8442
+Date2: #be6142
+Date3: #bd425f
+
+Font
+
+font-family: 'Oswald', sans-serif;
+font-family: 'Roboto', sans-serif;
+*/
+
+:root {
+    --prim: #131c29;
+    --sec: #ff8901;
+    --btnColor: #213349;
+    --footerColor: #0b1016;
+    --primFont: 'Oswald' , sans-serif;
+    --secFont: 'Roboto' , sans-serif;
+}
+
+* { box-sizing: border-box;}
+
+body {
+    background-color: #f3f4f6;
+    margin: 0;
+    padding: 0;
+}
+
+a { 
+    text-decoration: none;
+    transition: color 0.5s ease;
+}
+
+a:hover {
+    color: var(--sec);
+}
+
+.inner { 
+    width: 80%;
+    margin: 0 auto;
+}
+
+.top-section {
+    width: 100%;
+    padding: 10px 0;
+    background-color: var(--prim);   
+}
+
+.top-section .inner {
+    display: flex;
+    /* flex:65px; */
+    flex-wrap: wrap;
+}
+
+.link1, .nav1 {
+    width: calc(100%/2);
+}
+
+.nav1{
+    display: flex;
+    justify-content: end;
+}
+
+.top-section li {
+    display: inline;
+}
+
+.top-section .inner {
+    /* border: 1px solid white; */
+    font-family: var(--secFont);
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+.content-section {
+    display: flex;
+}
+
+.top-footer .inner {
+    display: flex;
+}
+
+.services-div, .opp-div, .news-div {
+    width: calc(100%/3);
+}
+
+.bottom-list {
+    display: flex;
+    list-style-type: none;
+    justify-content: end;
+}
+
+.bottom-list-item {
+    display: inline;
+    padding: 10px 15px;
+    /* margin: 0 10px; */
+    font-family: var(--primFont);
+    text-transform: uppercase;
+    border-radius: 5px;
+    background-color: var(--prim);
+}
+
+.hero-img {
+    width: 100%;
+}
+
+.bottom-nav {
+    margin-top: 40px;
+    border: 1px solid orange;
+    margin: 0;
+    padding: 0;
+    width: 400px;
+    float: right;
+}
+
+.list-link {
+    color: white;
+}
+
+.news-item {
+    display: flex;
+}
+
+.date-div {
+    display: flex;
+    align-items: center;
+}
+
+.date, .month {
+    flex-wrap: wrap;
+    flex-direction: column;
+    
+}
+
+/* Basically you use flex-wrap: wrap with flex-direction: column and make first item take 100% height and set width in %. Then you change order with media queries and height. */
